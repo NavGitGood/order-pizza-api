@@ -6,12 +6,11 @@ import config
 import os
 
 # Get the application instance
-connex_app = config.connex_app
+app = config.app
 
 # # Read the swagger.yml file to configure the endpoints
-connex_app.add_api("swagger.yaml")
-
+app.add_api("swagger.yaml")
 
 if __name__ == "__main__":
     port = int(os.environ.get('PORT', 5000))
-    connex_app.run(host='0.0.0.0', port=port, debug=False)
+    app.run(host='0.0.0.0', port=port, debug=False)
