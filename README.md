@@ -3,27 +3,13 @@
 <h3 align="center">A RESTful API as pizza restaurant ordering system.</h3>
 
 <h3 align="center">
-<a href="https://order-pizza-api.herokuapp.com/api/ui">Documentation </a>
+<a href="https://order-pizza-api-python3-7.herokuapp.com/api/ui">Documentation </a>
 </br>
 </br>
-
-[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/060895f2f997c9d08e1d#?env%5Bserver%5D=W3sia2V5IjoidXJsIiwidmFsdWUiOiIiLCJlbmFibGVkIjp0cnVlfV0=)
-
-</h1>
-
-Built with (but not limited to) :
-   * [connexion](https://github.com/zalando/connexion)
-   * [Flask](https://github.com/pallets/flask)
-   * [flask-marshmallow](https://github.com/marshmallow-code/flask-marshmallow)
-   * [marshmallow-sqlalchemy](https://github.com/marshmallow-code/marshmallow-sqlalchemy)
-   * [flask_jwt_extended](https://github.com/vimalloc/flask-jwt-extended)
-   * [Flask-SQLAlchemy](https://github.com/pallets/flask-sqlalchemy)
-   * [tornado](https://github.com/tornadoweb/tornado)
-
 
 ## Setup
 
-1. `git clone https://github.com/muhammadh-s/order-pizza-api`
+1. `git clone https://github.com/NavGitGood/order-pizza-api.git`
 2. `cd order-pizza-api`
 3. `pip install -r requirements.txt` 
    _or place virtual environment and then install_
@@ -34,14 +20,14 @@ Built with (but not limited to) :
 **Example Response**
 
 ```bash
-curl -s https://order-pizza-api.herokuapp.com/api/orders
+curl -s https://order-pizza-api-python3-7.herokuapp.com/api/orders
 ```
 
 ```json
 [
   {
     "Crust": "NORMAL",
-    "Flavor": "BEEF-NORMAL",
+    "Flavor": "VEGGI",
     "Order_ID": 1,
     "Size": "M",
     "Table_No": 1,
@@ -72,7 +58,7 @@ curl -s https://order-pizza-api.herokuapp.com/api/orders
 * POST : `/auth`    
 
 ```bash
-  curl -X POST -H "Content-Type: application/json" -d '{"username": "test", "password": "test"}'  https://order-pizza-api.herokuapp.com/api/auth
+  curl -X POST -H "Content-Type: application/json" -d '{"username": "test", "password": "test"}'  https://order-pizza-api-python3-7i.herokuapp.com/api/auth
 ```
 
 * POST : `/orders`  (_Access Token is required_)
@@ -89,7 +75,7 @@ curl
     "Size": "XL", 
     "Table_No": 9
   }' 
-  https://order-pizza-api.herokuapp.com/api/orders
+  https://order-pizza-api-python3-7.herokuapp.com/api/orders
   ```
 `Do replace the <JWT> in the above request with the token you have acquired.`
 
@@ -97,7 +83,7 @@ curl
 * DELETE : `/orders/{Order_ID}`
 
 ```bash
-curl -X DELETE https://order-pizza-api.herokuapp.com/api/orders/1
+curl -X DELETE https://order-pizza-api-python3-7.herokuapp.com/api/orders/1
 ```
 
 ## License
