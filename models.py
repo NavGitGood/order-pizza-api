@@ -1,5 +1,7 @@
 from datetime import datetime
 from config import db, ma
+from marshmallow_sqlalchemy import SQLAlchemyAutoSchema
+
 
 class Orders(db.Model):
     __tablename__ = "orders"
@@ -13,10 +15,11 @@ class Orders(db.Model):
         onupdate=datetime.utcnow
     )
 
+class OrderSchema(SQLAlchemyAutoSchema):
 
-# class OrderSchema(ma.ModelSchema):
-class OrderSchema(ma.SQLAlchemyAutoSchema):
     class Meta:
         model = Orders
         ordered = True
+        include_relationships = True
+        load_instance = True
 sqla_session = db.session
