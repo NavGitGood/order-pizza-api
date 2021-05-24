@@ -18,7 +18,7 @@ def read_all():
     data = order_schema.dump(orders)
     return data
 
-@jwt_required
+@jwt_required()
 def create(order):
     """
     This function creates a new order in the orders structure
